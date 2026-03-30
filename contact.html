@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,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">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Radiant Engineering | WhatsApp, Call &amp; Enquiries</title>
+    <meta name="description" content="Contact Radiant Engineering &amp; Trading via WhatsApp or phone for the fastest response — compressor service enquiries, 24/7 breakdown callouts, PMC, and spare parts in Southern Johor.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.radiantcompressor.com.my/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Radiant Engineering — WhatsApp for Fastest Response">
+    <meta property="og:description" content="Send us a WhatsApp message for immediate assistance — compressor service, breakdown repair, PMC contracts, and spare parts enquiries in Southern Johor, Malaysia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.radiantcompressor.com.my/contact.html">
+
+    <!-- Fonts: Montserrat (headings) + Roboto (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Schema.org: ContactPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Radiant Engineering",
+        "url": "https://www.radiantcompressor.com.my/contact.html",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Radiant Engineering & Trading Sdn. Bhd.",
+            "url": "https://www.radiantcompressor.com.my",
+            "telephone": "+60138083048",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Johor Bahru",
+                "addressRegion": "Johor",
+                "addressCountry": "MY"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "telephone": "+60138083048",
+                "availableLanguage": ["English", "Malay", "Chinese"],
+                "hoursAvailable": "Mo-Su 00:00-23:59"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- =============================================================
+     HEADER
+     ============================================================= -->
+<header class="site-header" id="site-header">
+    <div class="container">
+        <div class="header-inner">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="Radiant Engineering — Home">
+                <img
+                    src="data:image/jpeg;base64,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"
+                    alt="Radiant Engineering"
+                    class="logo-img"
+                    width="160" height="48"
+                >
+                <span class="logo-fallback" id="logo-fallback">
+                    <span class="logo-primary">RADIANT</span><span class="logo-sep"></span><span class="logo-secondary">ENGINEERING</span>
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="services.html" class="nav-link">
+                            Services
+                            <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+                        </a>
+                        <ul class="dropdown" role="menu">
+                            <li role="menuitem"><a href="services/compressor-service.html">Compressor Service &amp; 24/7 Repair</a></li>
+                            <li role="menuitem"><a href="services/preventive-maintenance.html">Preventive Maintenance (PMC)</a></li>
+                            <li role="menuitem"><a href="services/overhaul-reconditioning.html">Overhaul &amp; Reconditioning</a></li>
+                            <li role="menuitem"><a href="services/spare-parts.html">Spare Parts &amp; Consumables</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="products.html" class="nav-link">
+                            Products
+                            <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+                        </a>
+                        <ul class="dropdown" role="menu">
+                            <li role="menuitem"><a href="products/ceccato.html">Ceccato (Italy)</a></li>
+                            <li role="menuitem"><a href="products/compressor-accessories.html">Compressor Accessories</a></li>
+                            <li role="menuitem"><a href="products/spare-parts.html">Spare Parts</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link is-active" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header CTA -->
+            <a href="https://wa.me/60138083048?text=Hi%20Radiant%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp Us
+            </a>
+
+            <!-- Mobile toggle -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- =============================================================
+     MAIN
+     ============================================================= -->
+<main id="main-content">
+
+
+    <!-- =========================================================
+         PAGE HERO (charcoal)
+         ========================================================= -->
+    <section class="page-hero" aria-labelledby="contact-hero-heading">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item breadcrumb-item--current" aria-current="page">Contact</li>
+                </ol>
+            </nav>
+            <div class="page-hero-content">
+                <p class="section-eyebrow">Get in Touch</p>
+                <h1 id="contact-hero-heading" class="page-hero-title">Contact Us</h1>
+                <p class="page-hero-desc">WhatsApp is the fastest way to reach us — we respond quickly to all service enquiries, breakdown callouts, PMC requests, and spare parts orders. Available 24/7 for emergencies.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         NAMECARD CTA — PRIMARY PLACEMENT (white)
+         ========================================================= -->
+    <section class="section namecard-section" aria-labelledby="namecard-heading">
+        <div class="container">
+            <div class="namecard-inner">
+
+                <!-- Icon sequence: Camera → WhatsApp -->
+                <div class="namecard-icons" aria-hidden="true">
+                    <div class="namecard-icon-box">
+                        <!-- Camera icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    </div>
+                    <span class="namecard-icon-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                    <div class="namecard-icon-box">
+                        <!-- WhatsApp icon -->
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </div>
+                </div>
+
+                <h2 id="namecard-heading">Got a namecard? Just snap and send.</h2>
+                <p class="namecard-desc">Take a photo of your namecard and send it to us on WhatsApp — we'll follow up with you directly. No forms, no waiting. It's the fastest way to get a response from our team.</p>
+
+                <a href="https://wa.me/60138083048?text=Hi%20Radiant%2C%20I%27d%20like%20to%20enquire%20about%20your%20services.%20Here%20is%20my%20namecard."
+                   class="btn btn-whatsapp"
+                   style="font-size:1.0625rem; padding: 0.9rem 2rem;"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Send Your Namecard on WhatsApp
+                </a>
+
+                <p class="namecard-note">Why it works: industrial buyers are busy. Sending a namecard photo is faster than filling a form — and we get your contact details directly.</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT METHODS (gray-50)
+         ========================================================= -->
+    <section class="section contact-methods-section" aria-labelledby="contact-methods-heading">
+        <div class="container">
+            <header class="section-header">
+                <p class="section-eyebrow">Other Ways to Reach Us</p>
+                <h2 id="contact-methods-heading" class="section-title">Get in Touch</h2>
+                <p class="section-desc">We're based in Southern Johor. WhatsApp is fastest — but you can also call us directly or send a message below.</p>
+            </header>
+
+            <div class="contact-methods-grid">
+
+                <!-- WhatsApp -->
+                <div class="contact-method-card">
+                    <div class="contact-method-icon-wrap" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Fastest response — message us anytime, including after hours and weekends.</p>
+                    <p style="margin-top:0.75rem"><a href="https://wa.me/60138083048?text=Hi%20Radiant%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer">+6013-808 3048</a></p>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-method-card">
+                    <div class="contact-method-icon-wrap" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>Call us directly for urgent breakdowns or to speak with our team immediately.</p>
+                    <p style="margin-top:0.75rem"><a href="tel:+60138083048">+6013-808 3048</a></p>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-method-card">
+                    <div class="contact-method-icon-wrap" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3>Location</h3>
+                    <p>We serve factories and businesses across Southern Johor, Malaysia.</p>
+                    <p style="margin-top:0.75rem">Southern Johor, Malaysia</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         CTA STRIP (teal)
+         ========================================================= -->
+    <section class="cta-strip" aria-labelledby="contact-cta-heading">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h2 id="contact-cta-heading" class="cta-heading">Need a Service or Emergency Repair?</h2>
+                    <p class="cta-desc">Contact us via WhatsApp for the fastest response — available 24/7 for emergency breakdowns, service enquiries, PMC contracts, and spare parts requests.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="https://wa.me/60138083048?text=Hi%20Radiant%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="btn btn-cta-primary" target="_blank" rel="noopener noreferrer">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp Us
+                    </a>
+                    <a href="tel:+60138083048" class="btn btn-cta-secondary">Call +6013-808 3048</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+
+<!-- =============================================================
+     FOOTER
+     ============================================================= -->
+<footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-col footer-col--brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="data:image/jpeg;base64,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" alt="Radiant Engineering" width="140" height="42">
+                    <span class="footer-logo-fallback" id="footer-logo-fallback">RADIANT ENGINEERING</span>
+                </a>
+                <p class="footer-tagline">Industrial Air Compressors Trading, Service &amp; Rental in Southern Johor, Malaysia.</p>
+                <a href="https://wa.me/60138083048?text=Hi%20Radiant%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="footer-wa-btn" target="_blank" rel="noopener noreferrer">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat on WhatsApp
+                </a>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h3 class="footer-heading">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services/compressor-service.html">Compressor Service &amp; 24/7 Repair</a></li>
+                    <li><a href="services/preventive-maintenance.html">Preventive Maintenance (PMC)</a></li>
+                    <li><a href="services/overhaul-reconditioning.html">Overhaul &amp; Reconditioning</a></li>
+                    <li><a href="services/spare-parts.html">Spare Parts &amp; Consumables</a></li>
+                    <li><a href="services.html">All Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Products -->
+            <div class="footer-col">
+                <h3 class="footer-heading">Products</h3>
+                <ul class="footer-links">
+                    <li><a href="products/ceccato.html">Ceccato Compressors (Italy)</a></li>
+                    <li><a href="products/compressor-accessories.html">Compressor Accessories</a></li>
+                    <li><a href="products/spare-parts.html">Spare Parts</a></li>
+                    <li><a href="products.html">View All Products</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact</h3>
+                <ul class="footer-contact-list">
+                    <li>
+                        <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                        <span>Southern Johor, Malaysia</span>
+                    </li>
+                    <li>
+                        <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                        <a href="tel:+60138083048">+6013-808 3048</a>
+                    </li>
+                    <li>
+                        <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <a href="https://wa.me/60138083048" target="_blank" rel="noopener noreferrer">WhatsApp: +6013-808 3048</a>
+                    </li>
+                </ul>
+                <a href="contact.html" class="footer-contact-cta">Send an Enquiry
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">&copy; <span id="current-year"></span> Radiant Engineering &amp; Trading Sdn. Bhd. All rights reserved.</p>
+            <nav class="footer-legal" aria-label="Legal">
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+
+<!-- =============================================================
+     FLOATING WHATSAPP
+     ============================================================= -->
+<a href="https://wa.me/60138083048?text=Hi%20Radiant%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp — +6013-808 3048">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+            const isOpen = mainNav.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        });
+    }
+    // Footer year
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
