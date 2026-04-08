@@ -1,0 +1,48 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.radiantcompressor.com.my)",
+      "WebFetch(domain:www.radiantcompressor.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(python3 -c \"import os; size=os.path.getsize\\(''D:/Client Website/Radiant Engineering/radiant-website/images/Radiant Logo.png''\\); print\\(f''{size:,} bytes \\({size/1024:.1f} KB\\)''\\)\")",
+      "Bash(python3 -c \"from PIL import Image; print\\(''Pillow available''\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python3 -c \"from PIL import Image; print\\(''ok''\\)\")",
+      "Bash(python3:*)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $f ===\")",
+      "Read(//d/Client Website/Radiant Engineering/radiant-website/**)",
+      "Bash(done)",
+      "Bash(del build_products.py)",
+      "Bash(do echo:*)",
+      "Bash(ls -la *.html)",
+      "Bash(claude mcp:*)",
+      "Bash(npm install:*)",
+      "Bash(uipro init:*)",
+      "Bash(gh api:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/src/ui-ux-pro-max/scripts/search.py\")",
+      "Bash(curl -v \"https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/src/ui-ux-pro-max/scripts/search.py\")",
+      "Bash(curl -sk \"https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/src/ui-ux-pro-max/scripts/search.py\")"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"D:/Client Website/Radiant Engineering/radiant-website/.claude/update-md-hook.sh\"",
+            "timeout": 10,
+            "statusMessage": "Checking md files..."
+          }
+        ]
+      }
+    ]
+  }
+}
