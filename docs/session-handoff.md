@@ -52,6 +52,56 @@ Do NOT redo favicon generation — Session 21 is the final state.
 
 ---
 
+## What was completed — Session 28 (2026-04-11)
+
+### Airstone series name corrections — COMPLETE
+
+Client supplied official Airstone catalog PDF (`assets/2025-Airstone screw air compressor catalog-0611.pdf`). PDF was image-based so rendered to PNGs via PyMuPDF at `assets/pdf-pages/page-01.png` through `page-20.png`.
+
+**Catalog confirmed the following Airstone series:**
+- **HB Series** — Fixed Speed, direct driven rotary screw
+- **HVF Series** — Variable Frequency inverter type (AC asynchronous motor, 7% energy saving vs fixed)
+- **PMC Series** — Permanent Magnet VSD (IE4 synchronous motor, 20%+ energy saving)
+- **BD Series** — Double Stage PM VSD (37%+ energy saving)
+- **LP Series** — Low Pressure Single Stage PM VSD
+- **All-in-One (4-in-1)** — Integrated compressor + dryer + tank + filters
+
+**Wrong series names that were on the site:**
+- "CSM Series" — does not exist in Airstone catalog → replaced with **HB Series**
+- "DRB Series VSD" — does not exist in Airstone catalog → replaced with **PMC Series**
+- "35% energy savings" for VSD — catalog says PMC = above 20% → corrected to **over 20%**
+
+**Files changed (4 files, all CSM/DRB references eliminated):**
+1. `products/airstone.html` — title, meta description, OG tags, JSON-LD, HB section heading/desc, PMC section heading/desc, VFD feature → PM VSD feature, 35% → 20%, "DRB VSD" inline mention → "PMC Series"
+2. `index.html` — product card series list: CSM/DRB → HB/PMC
+3. `products.html` — both series cards: CSM/DRB → HB/PMC, 35% → 20%
+4. `about.html` — brand series labels: CSM/DRB → HB/PMC
+
+**Verification:** Grep for CSM|DRB across all 14 HTML files — zero matches.
+
+---
+
+## What was completed — Session 27 (2026-04-11)
+
+### Absolute asset path conversion — COMPLETE
+
+Converted all relative asset paths to root-relative absolute paths across all 14 HTML files and `css/styles.css`. No file is now dependent on its folder depth.
+
+**Pattern replaced:**
+- `../assets/` → `/assets/` (subdir files)
+- `assets/` → `/assets/` (root-level files)
+- `../css/styles.css` → `/css/styles.css` (subdir files)
+- `css/styles.css` → `/css/styles.css` (root-level files)
+- `url('../assets/` → `url('/assets/` (styles.css background-image)
+
+**Files changed:** All 14 HTML files + css/styles.css (15 files total, 96 references updated)
+
+**Verified in preview:** Logo, product images, service images, CSS background all loading correctly at both root depth (index.html) and subdirectory depth (services/overhaul-reconditioning.html). Zero broken images.
+
+**⚠️ Still outstanding:** `images/projects/proj-1.jpeg` through `proj-6.jpeg` were not moved to `assets/images/existing/` and projects.html still references `/images/projects/proj-*.jpeg`. These work for now since the old folder wasn't deleted, but the files should be migrated to assets. See Next recommended work.
+
+---
+
 ## What was completed — Session 26 (2026-04-11)
 
 ### Image folder migration — DONE
@@ -214,7 +264,7 @@ Full 13-page audit sequence defined. Confirmed facts recorded. Page 1 changes: n
 ## Key decisions (standing)
 
 - **Airstone rule:** Do not invent Airstone brand claims. Only use facts from official sources or confirmed client instruction. airstone.com.my/airstone.my are not accessible.
-- **CSM/DRB series:** Retained on all pages. Client to confirm whether these series names apply to Airstone.
+- **Airstone series (confirmed from catalog):** HB Series (fixed speed), PMC Series (permanent magnet VSD). These are now used on all pages. HVF, BD, LP, All-in-One series also exist in catalog — not yet featured on site.
 - **Product image `ceccato-compressor.jpg`:** Used as temp placeholder in Airstone card. Must be replaced when client supplies Airstone photo.
 - **"Request a Site Visit":** Standard secondary CTA across all pages — fully applied.
 - **Logo:** `assets/brand/logo/logo-primary.png` — wired on all 14 pages.
