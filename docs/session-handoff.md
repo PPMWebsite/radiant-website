@@ -52,6 +52,41 @@ Do NOT redo favicon generation — Session 21 is the final state.
 
 ---
 
+## What was completed — Session 26 (2026-04-11)
+
+### Image folder migration — DONE
+Client moved all images to `assets/images/existing/`. Session 26 updated all HTML and CSS references accordingly.
+
+**Files changed:**
+- `css/styles.css` — hero-bg CSS background path updated
+- `index.html` — 3 product card image paths updated
+- `products.html` — 3 product card image paths updated
+- `about.html` — brands-serviced.png path updated
+- `products/airstone.html` — ceccato-compressor.jpg path updated
+- `services/overhaul-reconditioning.html` — image swapped (see below)
+
+**⚠️ Exception — not yet migrated:** `images/projects/proj-1.jpeg` through `proj-6.jpeg` were NOT moved to assets. `projects.html` still references `images/projects/`. Client should either move these files to `assets/images/existing/` or confirm replacement with numbered images 10030–10032 (similar installation shots already in assets).
+
+### New image wiring — Session 26
+1. **services/overhaul-reconditioning.html** — Replaced `service-overhaul-technicians.png` (AI-rendered) with `service-overhaul-bearing.jpeg` (authentic hands-on bearing/airend work photo). More credible for an overhaul service page.
+2. **services/preventive-maintenance.html** — Added `service-pmc-inspection.jpeg` (technician with clipboard inspecting compressor) — first image on this page, perfect fit for PMC.
+3. **about.html** — Added `team-technicians.jpeg` (4 technicians in uniforms in front of teal compressors) — first team photo on the site.
+
+### Full image audit — Session 26
+Catalogued all 32+ numbered images in `assets/images/existing/`. See docs/image-inventory.md for full catalog. Key findings:
+- **Do NOT use:** 10001.png (Ceccato brand logo), 10004.webp (Ceccato product), 10018/10020 (landscape templates), 10026 (blank)
+- **Spare parts gallery ready:** 10002–10025 range are labeled individual part photos — available for spare-parts pages when ready
+- **Project-style shots available:** 10029–10032 show warehouse stock and installation shots — could supplement or replace proj-1–6
+
+### All image verifications — PASSED
+Confirmed in preview (no broken images):
+- index.html: all 3 product cards ✅
+- about.html: team photo + brands panel ✅
+- services/preventive-maintenance.html: PMC inspection ✅
+- services/overhaul-reconditioning.html: bearing photo referenced ✅
+
+---
+
 ## What was completed — Session 25 (2026-04-11)
 
 ### Image wiring — DONE
@@ -213,8 +248,10 @@ Full 13-page audit sequence defined. Confirmed facts recorded. Page 1 changes: n
 
 ## Next recommended work
 
-All audit + QA work complete. Awaiting client assets. Next steps:
-1. **Image swap** — replace `ceccato-compressor.jpg` with Airstone product photo on: `index.html`, `products.html`, `products/airstone.html` (needs client to supply)
-2. **Grey section images** — implement industrial background images for grey sections on `about.html`, `services.html`, `services/*.html` (needs client to supply)
-3. **SVG logo** — swap `logo-primary.png` (893KB) for SVG version once client supplies
-4. **Additional project photos** — wire any new photos into `projects.html` gallery once supplied
+1. **Project images path fix** — `images/projects/proj-1.jpeg` through `proj-6.jpeg` are NOT in assets. Options: (a) client moves them to `assets/images/existing/` and paths are updated, or (b) replace with existing assets 10030–10032 (similar shots already there). **Needs client decision.**
+2. **Airstone product photo** — replace `ceccato-compressor.jpg` temp placeholder on index.html, products.html, products/airstone.html (needs client to supply)
+3. **Spare parts page images** — 20+ labeled individual part photos (10002–10025) are available in assets and ready to wire into a gallery section on spare-parts pages
+4. **warehouse-stock.jpeg** — available in assets, not yet wired — could go on about.html or products pages
+5. **service-overhaul-technicians.png** — removed from overhaul page (replaced by bearing photo); could be used on about.html or a team section if desired
+6. **Grey section backgrounds** — industrial background images for grey sections on services pages (client to supply)
+7. **SVG logo** — swap logo-primary.png (893KB) for SVG once client supplies

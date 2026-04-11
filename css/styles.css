@@ -1,4 +1,4 @@
-/* =============================================================
+﻿/* =============================================================
    Radiant Engineering — Main Stylesheet
    Brand colours verified from live site (radiantcompressor.com.my)
    Primary: Charcoal #1F2933 | Accent: Teal #27B7C5
@@ -517,7 +517,7 @@ p { color: var(--text-muted); }
     background-color: var(--charcoal);
     background-image:
         linear-gradient(135deg, rgba(31,41,51,0.97) 0%, rgba(45,61,74,0.92) 50%, rgba(31,41,51,0.97) 100%),
-        url('../images/hero-bg.jpg');  /* Add hero-bg.jpg — industrial/compressor photo */
+        url('/assets/images/existing/hero-bg.jpg');  /* hero-bg.jpg — industrial/compressor photo */
     background-size: cover;
     background-position: center;
     overflow: hidden;

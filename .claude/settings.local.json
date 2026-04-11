@@ -33,7 +33,8 @@
       "WebFetch(domain:airstone.my)",
       "Bash(python -c \"from PIL import Image, ImageDraw, ImageFilter; print\\('PIL OK'\\)\")",
       "Bash(python -c ':*)",
-      "Bash(python)"
+      "Bash(python)",
+      "Bash(powershell -Command ':*)"
     ]
   },
   "hooks": {
