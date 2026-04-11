@@ -72,7 +72,7 @@ Suggested:
 | compressor-accessories.jpg | Client-supplied (old site) | images/products/compressor-accessories.jpg | ✅ Yes | index.html + products.html accessories card | Rendered display of accessories |
 | spare-parts.webp | Client-supplied (old site) | images/products/spare-parts.webp | ✅ Yes | index.html + products.html spare parts card | Inline air filters in packaging |
 | brands-serviced.png | Client-supplied (old site) | images/brands-serviced.png | ✅ Yes | about.html brands section | 7 brand logos panel |
-| service-overhaul-technicians.png | Client-supplied (old site) | images/service-overhaul-technicians.png | ⚠️ Not yet wired | services/overhaul-reconditioning.html | Available — needs wiring |
+| service-overhaul-technicians.png | Client-supplied (old site) | images/service-overhaul-technicians.png | ✅ Yes | services/overhaul-reconditioning.html | Wired Session 25 — figure after svc-intro-grid |
 | proj-1.jpeg – proj-6.jpeg | Client-supplied (old site) | images/projects/ | ✅ Yes | projects.html gallery | 6 project photos wired |
 
 ## Images needed from client (not yet supplied)
@@ -100,6 +100,7 @@ Suggested:
 |---|---|---|---|---|
 | index.html | Hero background | images/hero-bg.jpg | ✅ Active | CSS background on .hero |
 | index.html | Airstone product card | images/products/ceccato-compressor.jpg | ⚠️ Temp | Was Ceccato photo — flag for Airstone replacement |
+| products/airstone.html | Brand intro section | images/products/ceccato-compressor.jpg | ⚠️ Temp | Wired Session 25 — figure after svc-intro-grid; awaiting Airstone photo |
 | index.html | Accessories card | images/products/compressor-accessories.jpg | ✅ Active | |
 | index.html | Spare Parts card | images/products/spare-parts.webp | ✅ Active | |
 | about.html | Brands section | images/brands-serviced.png | ✅ Active | |

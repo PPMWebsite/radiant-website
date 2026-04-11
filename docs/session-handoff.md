@@ -52,6 +52,33 @@ Do NOT redo favicon generation — Session 21 is the final state.
 
 ---
 
+## What was completed — Session 25 (2026-04-11)
+
+### Image wiring — DONE
+1. `services/overhaul-reconditioning.html` — wired `../images/service-overhaul-technicians.png` as `<figure>` after `svc-intro-grid` in Section 1 (white). Alt: "Radiant Engineering technicians performing a compressor overhaul and reconditioning in Johor". Confirmed loading in preview (no console errors, image not broken).
+2. `products/airstone.html` — wired `../images/products/ceccato-compressor.jpg` as temp placeholder `<figure>` after `svc-intro-grid` in brand intro section. Alt flags it as placeholder awaiting Airstone photo. Confirmed loading in preview.
+
+### products/airstone.html QA — PASSED
+- Page title: "Airstone Air Compressors in Johor — CSM & DRB VSD | Radiant Engineering" ✅
+- Hero: "Airstone Air Compressors" with correct Johor/Radiant copy ✅
+- Brand intro: two-column grid + product image below ✅
+- CSM Series section: fixed-speed features list ✅
+- Nav dropdown: "Airstone Compressors" ✅ (all links correct)
+- Footer Products: "Airstone Compressors" ✅
+- CTAs: "Get a Price on WhatsApp" + "Request a Site Visit" ✅
+- No console errors ✅
+
+### Site-wide QA pass — PASSED
+- "Airstone Compressors" found in all 14 HTML files ✅
+- "Request a Site Visit" found in 12 files (contact.html + 404.html are correct exceptions) ✅
+- Zero matches for Ceccato / ceccato.html / "Made in Italy" across all 14 files ✅
+
+### image-inventory.md — updated
+- service-overhaul-technicians.png → marked ✅ Wired
+- products/airstone.html brand intro row → added (temp placeholder)
+
+---
+
 ## What was completed — Session 24 (2026-04-11)
 
 ### QA verification pass — COMPLETE
@@ -186,8 +213,8 @@ Full 13-page audit sequence defined. Confirmed facts recorded. Page 1 changes: n
 
 ## Next recommended work
 
-Ceccato→Airstone audit is complete. Possible next steps:
-1. **Image swap** — replace `ceccato-compressor.jpg` with Airstone product photo (needs client asset)
-2. **products/airstone.html QA** — full visual review of the new page
-3. **Site-wide QA pass** — check all pages render correctly with updated nav and CTAs
-4. **Grey section images** — implement industrial background images once client supplies assets
+All audit + QA work complete. Awaiting client assets. Next steps:
+1. **Image swap** — replace `ceccato-compressor.jpg` with Airstone product photo on: `index.html`, `products.html`, `products/airstone.html` (needs client to supply)
+2. **Grey section images** — implement industrial background images for grey sections on `about.html`, `services.html`, `services/*.html` (needs client to supply)
+3. **SVG logo** — swap `logo-primary.png` (893KB) for SVG version once client supplies
+4. **Additional project photos** — wire any new photos into `projects.html` gallery once supplied
