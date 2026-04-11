@@ -29,7 +29,7 @@ This file is updated at the end of every working session.
 | Services    | services.html | ✅ Done | 5 sections: page-hero, services grid (4 cards), why radiant (4 cards), how it works (3 steps), CTA |
 | Contact     | contact.html  | ✅ Done | 4 sections: page-hero, namecard CTA (primary), contact methods (3 cards), CTA strip |
 | Products Landing | products.html | ✅ Done | 4 sections: page-hero, 3-card category grid (Ceccato/Accessories/Parts), charcoal brand feature (CSM + DRB series cards), teal CTA |
-| Ceccato | products/ceccato.html | ✅ Done | 6 sections: hero (3-level breadcrumb), brand intro (2-col grid), CSM features (8 items, gray-50), DRB VSD features (8 items, white), why us (3 cards, charcoal), CTA |
+| Airstone | products/airstone.html | ✅ Done | 6 sections: hero (breadcrumb), brand intro (2-col grid), CSM features (8 items, gray-50), DRB VSD features (8 items, white), why us (3 cards, charcoal), CTA. Full Ceccato→Airstone rewrite; ceccato.html deleted. |
 | Accessories | products/compressor-accessories.html | ✅ Done | Same structure. 8 accessory types: dryers, filters, separators, regulators, receivers, solenoids, drains, piping |
 | Spare Parts (products) | products/spare-parts.html | ✅ Done | Same structure. 8 parts types: separators, filters, oil, belts, bearings, valves, thermostats, sensors |
 | Compressor Service | services/compressor-service.html | ✅ Done | 4 sections: page-hero (2-level breadcrumb), what the service is (2-col intro), what's included (8-item feature list), why Radiant (3 cards, charcoal bg), CTA strip |
@@ -58,6 +58,9 @@ This file is updated at the end of every working session.
 
 ## Session Log
 
+### Session 22 (2026-04-11)
+**Page 3 — products/airstone.html:** `products/ceccato.html` deleted. `products/airstone.html` created with 29 targeted rewrites — all Ceccato/Italy/Italian-engineered references removed across head, nav, hero, brand intro, CSM/DRB section descs, why section, CTA, footer, and floating WA button. CTA secondary updated to "Request a Site Visit". CSM/DRB series names retained pending client confirmation.
+
 ### Session 16 (2026-03-30)
 **Task 1 — Path audit:** Full audit of all 13 HTML files. No issues found — no localhost/127.0.0.1/absolute paths anywhere. All root pages use `css/styles.css`, all sub-pages use `../css/styles.css`. All JS is inline (no external src). CSS has one URL: `url('../images/hero-bg.jpg')` — relative, correct. The colleague's unstyled-HTML issue was caused by sharing only `index.html` without the `css/` folder — expected behaviour, not a bug.
 
@@ -72,6 +75,48 @@ This file is updated at the end of every working session.
 - Operating hours confirmed from live site: Mon–Fri 9am–5pm, Sat 9am–1:30pm, Sun Closed. Added as 5th contact method card in `contact.html`. JSON-LD `hoursAvailable` in contact.html corrected from `Mo-Su 00:00-23:59` to actual hours.
 - `about.html` intro paragraph updated: added "established in 2008" — founding year confirmed from live site.
 - Contact info LOCKED section updated (see below).
+
+### Session 19 (2026-04-11) — Page Parity Audit begins
+**Workflow:** 13-page parity audit + improvement sequence launched. Business owner feedback applied as site-wide rules.
+
+**New confirmed facts recorded:**
+- Full address: 21 Jalan Perniagaan Setia 1/4, Taman Perniagaan Setia, 81100 Johor Bahru, Johor, Malaysia
+- Company reg: 200801010246 (811534-V)
+
+**Site-wide rules from client feedback:**
+- Ceccato → Airstone across all product pages
+- "Request a Site Visit" CTA added to all relevant pages
+- Spare parts: highlight brand origin (Japanese / European / China)
+- Grey backgrounds: industrial images with transparency (pending client image supply)
+
+**Page 1 — index.html completed:**
+- Nav Products dropdown: "Ceccato (Italy)" → "Airstone Compressors"; href → products/airstone.html
+- Hero secondary button: "Get a Quote" → "Request a Site Visit"
+- Hero sub-CTAs: "Get a Quote" link added so it stays accessible
+- Product card 1: full Ceccato → Airstone rewrite (title, description, alt text, Italy tag removed, button, href)
+- Footer Products: "Ceccato Compressors (Italy)" → "Airstone Compressors"; href → products/airstone.html
+- CTA strip: "Get a Quote" → "Request a Site Visit"
+
+**Docs created this session:** docs/findings-log.md, docs/source-of-truth.md, docs/image-inventory.md (populated)
+
+**Image flag:** `images/products/ceccato-compressor.jpg` is a Ceccato photo currently used as temp placeholder in Airstone product card — must be replaced when client supplies Airstone product image.
+
+**Next:** Page 3 — products/ceccato.html (rename to airstone.html + full audit)
+
+### Session 20 (2026-04-11) — Page 2 — products.html
+**14 targeted edits — zero Ceccato/Italy references remain:**
+- Meta description + OG description: Ceccato → Airstone
+- JSON-LD: product name, description, brand, URL all updated to Airstone/airstone.html
+- Nav dropdown: "Ceccato (Italy)" → "Airstone Compressors"; href → products/airstone.html
+- Page hero desc: Italy/Italian references removed
+- Card 1: title, desc, link text, href all rewritten for Airstone
+- Brand section H2 + lead paragraph: all Italy/manufactured-in claims removed
+- Brand section CTA button: Ceccato → Airstone, href → products/airstone.html
+- CTA strip secondary: "Send a Detailed Enquiry" → "Request a Site Visit" → contact.html
+- Footer Products: "Ceccato Compressors (Italy)" → "Airstone Compressors" + href updated
+- HTML comment updated
+
+---
 
 ### Session 17 (2026-03-31)
 **Layout audit — 10 undefined CSS tokens fixed (critical bug):**

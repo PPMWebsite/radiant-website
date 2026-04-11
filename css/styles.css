@@ -992,7 +992,7 @@ p { color: var(--text-muted); }
     overflow: hidden;
     display: flex; align-items: center; justify-content: center;
 }
-.product-card-visual--ceccato   { background: linear-gradient(145deg, #162030 0%, #1F2D3F 60%, #0F1822 100%); }
+.product-card-visual--airstone  { background: linear-gradient(145deg, #162030 0%, #1F2D3F 60%, #0F1822 100%); }
 .product-card-visual--accessories { background: linear-gradient(145deg, #0F2020 0%, #1A3530 60%, #0C1C1C 100%); }
 .product-card-visual--parts       { background: linear-gradient(145deg, #201510 0%, #3A2515 60%, #180F08 100%); }
 
@@ -1536,7 +1536,8 @@ p { color: var(--text-muted); }
         display: none;
     }
     .nav-item.has-dropdown:hover .dropdown,
-    .nav-item.has-dropdown:focus-within .dropdown { display: block; }
+    .nav-item.has-dropdown:focus-within .dropdown,
+    .nav-item.has-dropdown.is-open .dropdown { display: block; }
     .dropdown li a { padding: var(--sp-2) var(--sp-4); font-size: 0.9rem; }
     .dropdown-divider { margin: var(--sp-2) var(--sp-3); }
 }

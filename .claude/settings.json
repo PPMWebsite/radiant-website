@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR\\.claude\\hooks\\load-session-handoff.ps1\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "Check whether docs/session-handoff.md accurately reflects the current project state after this turn. Read CLAUDE.md and relevant docs if needed. If the handoff is missing or stale relative to the work completed in this turn, respond with {\"ok\": false, \"reason\": \"Update docs/session-handoff.md with what changed this session, files updated, key decisions, open questions, next steps, and what should not be re-done.\"}. If it is already current, respond with {\"ok\": true}."
+          }
+        ]
+      }
+    ]
+  }
+}

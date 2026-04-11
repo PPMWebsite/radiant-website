@@ -27,7 +27,13 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(curl -s \"https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/src/ui-ux-pro-max/scripts/search.py\")",
       "Bash(curl -v \"https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/src/ui-ux-pro-max/scripts/search.py\")",
-      "Bash(curl -sk \"https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/src/ui-ux-pro-max/scripts/search.py\")"
+      "Bash(curl -sk \"https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/src/ui-ux-pro-max/scripts/search.py\")",
+      "WebFetch(domain:airstone.com.my)",
+      "WebFetch(domain:www.airstone.com.my)",
+      "WebFetch(domain:airstone.my)",
+      "Bash(python -c \"from PIL import Image, ImageDraw, ImageFilter; print\\('PIL OK'\\)\")",
+      "Bash(python -c ':*)",
+      "Bash(python)"
     ]
   },
   "hooks": {
